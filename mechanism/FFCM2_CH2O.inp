@@ -1,0 +1,117 @@
+!   CH2O based on Foundational Fuel Chemistry Model Version 2 (FFCM-2)
+!
+!   - Description:
+!     FFCM-2: An optimized reaction model for combustion chemistry of species up to CH2O
+!
+!   - Authors:
+!       Yue Zhang, Wendi Dong, Laurien A. Vandewalle, Rui Xu, Gregory P. Smith, Hai Wang
+!
+!   - Date:
+!       July 2023
+!
+!   - Contact:
+!       Hai Wang: haiwang@stanford.edu
+!
+!   - https://web.stanford.edu/group/haiwanglab/FFCM2/
+!
+!   - How to cite:
+!
+!     Y. Zhang, W. Dong, L. Vandewalle, R. Xu, G.P. Smith and H. Wang, Foundational Fuel Chemistry Model Version 2.0 (FFCM-2), https://web.stanford.edu/group/haiwanglab/FFCM2, 2023.
+!
+!    Bibtex
+!    @Misc{ZDV2023,
+!    author           = {Zhang, Yue and Dong, Wendi and Vandewalle, Laurien and Xu, Rui and Smith, Gregory and Wang, Hai},
+!    title            = {Foundational {Fuel} {Chemistry} {Model} {Version} 2.0 ({FFCM}-2)},
+!    year             = {2023},
+!    modificationdate = {2023-06-28T19:14:11},
+!    url              = {https://web.stanford.edu/group/haiwanglab/FFCM2/},
+!    }
+
+ELEMENTS
+H  O  N  C
+END
+
+SPECIES
+N2  H  H2  O  O2  OH  H2O  HO2  H2O2  CO  CO2  HCO  CH2O
+END
+
+REACTIONS
+H+O2<=>O+OH                                        1.0399e+14  0.000  15310.00
+H2+O<=>H+OH                                        3.6490e+12  0.000  7950.00
+DUPLICATE
+H2+O<=>H+OH                                        7.6025e+14  0.000  19180.00
+DUPLICATE
+H2+OH<=>H+H2O                                      2.1578e+08  1.510  3437.00
+2OH<=>H2O+O                                        3.3500e+04  2.420  -1928.00
+H2+M<=>2H+M                                        3.8767e+19  -1.400  104390.00
+CH2O/2.5/  CO/1.9/  CO2/3.8/  H2/2.5/  H2O/12.0/
+2O+M<=>O2+M                                        6.1600e+15  -0.500  0.00
+CH2O/2.5/  CO/1.9/  CO2/3.8/  H2/2.5/  H2O/12.0/
+H+O+M<=>OH+M                                       4.7124e+18  -1.000  0.00
+CH2O/2.5/  CO/1.9/  CO2/3.8/  H2/2.5/  H2O/12.0/
+H2O+M<=>H+OH+M                                     5.9030e+27  -3.320  120800.00
+CH2O/2.5/  CO/1.9/  CO2/3.8/  H2/3.0/  H2O/0.0/  N2/2.0/  O2/1.5/
+H2O+H2O<=>H+OH+H2O                                 1.0100e+26  -2.440  120200.00
+H2O/1.0/
+H+O2(+M)<=>HO2(+M)                                 5.2863e+12  0.440  0.000e+00
+CH2O/2.5/  CO/1.9/  CO2/2.98148670778874/  H2/2.0/  H2O/13.76974842661546/  N2/1.0/  O2/0.78/
+LOW / 7.2417e+20  -1.720  5.250e+02 /
+TROE / 0.5  30.0  90000.0  90000.0 /
+H+HO2<=>H2+O2                                      3.2729e+06  2.090  -1455.00
+H+HO2<=>2OH                                        6.3600e+13  0.000  300.00
+H+HO2<=>H2O+O                                      1.6131e+12  0.000  0.00
+HO2+O<=>O2+OH                                      1.7208e+13  0.000  -445.00
+HO2+OH<=>H2O+O2                                    7.6368e+12  0.000  -1093.00
+DUPLICATE
+HO2+OH<=>H2O+O2                                    4.5000e+14  0.000  10930.00
+DUPLICATE
+2HO2<=>H2O2+O2                                     1.9400e+11  0.000  -1409.00
+DUPLICATE
+2HO2<=>H2O2+O2                                     1.0300e+14  0.000  11040.00
+DUPLICATE
+H2O2(+M)<=>2OH(+M)                                 1.9252e+12  0.900  4.875e+04
+CH2O/2.5/  CO/1.5/  CO2/1.6/  H2/3.7/  H2O/7.5/  H2O2/7.7/  N2/1.5/  O2/1.2/
+LOW / 2.3968e+24  -2.300  4.875e+04 /
+TROE / 0.58  30.0  90000.0  90000.0 /
+H+H2O2<=>H2O+OH                                    2.4100e+13  0.000  3970.00
+H+H2O2<=>H2+HO2                                    4.8200e+13  0.000  7950.00
+H2O2+O<=>HO2+OH                                    9.6300e+06  2.000  3970.00
+H2O2+OH<=>H2O+HO2                                  1.7611e+12  0.000  318.00
+DUPLICATE
+H2O2+OH<=>H2O+HO2                                  7.6310e+13  0.000  7270.00
+DUPLICATE
+CO+O(+M)<=>CO2(+M)                                 1.2029e+13  -0.310  6.943e+03
+CH2O/2.5/  CO/1.9/  CO2/3.8/  H2/2.5/  H2O/12.0/
+LOW / 1.5888e+21  -2.100  5.500e+03 /
+CO+O2<=>CO2+O                                      2.0406e+12  0.000  47700.00
+CO+OH<=>CO2+H                                      6.7547e+04  2.050  -356.00
+DUPLICATE
+CO+OH<=>CO2+H                                      5.2148e+12  -0.660  332.00
+DUPLICATE
+CO+HO2<=>CO2+OH                                    1.5700e+05  2.180  17944.00
+HCO+M<=>CO+H+M                                     5.3789e+17  -1.200  17734.00
+CH2O/2.5/  CO/1.5/  CO2/2.0/  H2O/12.0/
+H+HCO<=>CO+H2                                      8.9578e+13  0.000  0.00
+HCO+O<=>CO+OH                                      3.0100e+13  0.000  0.00
+HCO+O<=>CO2+H                                      3.0100e+13  0.000  0.00
+HCO+OH<=>CO+H2O                                    1.0800e+14  0.000  0.00
+HCO+O2<=>CO+HO2                                    5.9024e+06  1.900  -1370.00
+HCO+HO2=>CO2+H+OH                                  3.0100e+13  0.000  0.00
+H+HCO(+M)<=>CH2O(+M)                               1.7951e+14  -0.030  -1.420e+02
+CH2O/2.5/  CO/1.5/  CO2/2.0/  H2/2.0/  H2O/6.0/
+LOW / 4.0439e+34  -5.530  6.128e+03 /
+TROE / 0.782  271.0  2755.0  6570.0 /
+CH2O(+M)<=>CO+H2(+M)                               3.7000e+13  0.000  7.198e+04
+CH2O/2.5/  CO/1.5/  CO2/2.0/  H2/2.0/  H2O/6.0/
+LOW / 4.4000e+38  -6.100  9.400e+04 /
+TROE / 0.932  197.00000000000003  1540.0  10300.0 /
+CH2O+H<=>H2+HCO                                    5.3963e+12  0.360  4609.00
+CH2O+H=>CO+H2+H                                    1.7316e+13  0.580  14395.00
+H/1.0/
+CH2O+O<=>HCO+OH                                    7.2986e+15  -0.697  5201.80
+CH2O+O=>CO+H+OH                                    2.7101e+21  -1.903  22676.00
+CH2O+OH<=>H2O+HCO                                  1.2126e+10  0.975  24.66
+CH2O+OH=>CO+H+H2O                                  4.0551e+11  0.692  9370.90
+CH2O+O2<=>HCO+HO2                                  3.1490e+05  2.500  36460.00
+CH2O+HO2<=>H2O2+HCO                                4.9957e+04  2.500  10210.00
+END
