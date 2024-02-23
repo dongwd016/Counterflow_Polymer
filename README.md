@@ -25,9 +25,8 @@ r_b=\frac{\dot{m}}{\rho_{\rm solid}}=\frac{\dot{Q}_{\rm cond}}{\Delta h\rho_{\rm
 The regression rate can also be calculated from continuity.
 
 ```math
-\begin{equation}
+\tag{2}
 \tilde{r_b}=\frac{\rho_{\rm gas}v_f}{\rho_{\rm solid}},
-\end{equation}
 ```
 
 where $v_f$ is the gas phase fuel inlet velocity.
