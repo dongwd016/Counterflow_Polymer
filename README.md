@@ -17,9 +17,8 @@ The regression rate, $r_b$, can be calculated by both energy conservation and co
 where $T_i$ is the inlet solid POM temperature, and $T_S$ is the outlet gas phase CH<sub>2</sub>O temperature. The regression rate can be obtained from the mass flow rate as
 
 ```math
-\begin{equation}
+\tag{1}
 r_b=\frac{\dot{m}}{\rho_{\rm solid}}=\frac{\dot{Q}_{\rm cond}}{\Delta h\rho_{\rm solid}}=\frac{k_{\rm gas}\left.\frac{\partial T}{\partial x}\right|_{x=0}}{(h_{\rm POM}^{T_i}-h_{\rm CH_2O}^{T_S})\rho_{\rm solid}}.
-\end{equation}
 ```
 
 The regression rate can also be calculated from continuity.
