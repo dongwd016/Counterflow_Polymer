@@ -14,12 +14,14 @@ The regression rate, $r_b$, can be calculated by both energy conservation and ma
 \dot{m}h_{\rm POM}^{T_i}-\dot{m}h_{\rm CH_2O}^{T_S}+\dot{Q}_{\rm cond}=0,
 ```
 
-where $T_i$ is the inlet solid POM temperature, and $T_S$ is the outlet gas phase CH<sub>2</sub>O temperature. The regression rate can be obtained from the mass flow rate as
+where \dot{m} is the fuel consumption rate, $T_i$ is the inlet solid POM temperature, $h_{\rm POM}^{T_i}$ is the POM enthalpy at temperature $T_i$, $T_S$ is the outlet gas phase CH<sub>2</sub>O temperature, $h_{\rm CH_2O}^{T_S}$ is the gas CH<sub>2</sub>O enthalpy at temperature $T_S$ and $\dot{Q}_{\rm cond}$ is the heat transfer rate. The regression rate can be obtained from the mass flow rate as
 
 ```math
 \tag{1}
-r_b=\frac{\dot{m}}{\rho_{\rm solid}}=\frac{\dot{Q}_{\rm cond}}{\Delta h\rho_{\rm solid}}=\frac{k_{\rm gas}\left.\frac{\partial T}{\partial x}\right|_{x=0}}{(h_{\rm POM}^{T_i}-h_{\rm CH_2O}^{T_S})\rho_{\rm solid}}.
+r_b=\frac{\dot{m}}{\rho_{\rm solid}}=\frac{\dot{Q}_{\rm cond}}{\Delta h\rho_{\rm solid}}=\frac{k_{\rm gas}\left.\frac{\partial T}{\partial x}\right|_{x=0}}{(h_{\rm POM}^{T_i}-h_{\rm CH_2O}^{T_S})\rho_{\rm solid}},
 ```
+
+where $\rho_{\rm solid}$ is the solid POM density and $k_{\rm gas}$ is the gas thermal conductivity.
 
 The regression rate can also be calculated from mass continuity.
 
@@ -28,7 +30,7 @@ The regression rate can also be calculated from mass continuity.
 \tilde{r_b}=\frac{\rho_{\rm gas}v_f}{\rho_{\rm solid}},
 ```
 
-where $v_f$ is the gas phase fuel inlet velocity.
+where $v_f$ is the gas phase fuel inlet velocity and $\rho_{\rm gas}$ is the gas density.
 
 Required boundary conditions to solve the counterflow problem are
 - Oxidizer inlet composition: provided. Pure oxygen for example.
