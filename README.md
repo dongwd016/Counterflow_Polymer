@@ -1,6 +1,6 @@
 # Counterflow Polymer
 
-A Cantera implementation of the counterflow solid fuel regression rate calculation algorithm in "G. Talamantes, Characterization of polyoxymethylene as a high-density fuel for use in hybrid rocket applications, Ph.D. thesis, The Pennsylvania State University (2019).".
+A Cantera implementation of the counterflow solid fuel regression rate calculation.  The algorithm is given in "G. Talamantes, Characterization of polyoxymethylene as a high-density fuel for use in hybrid rocket applications, Ph.D. thesis, The Pennsylvania State University (2019)."
 
 ## Schematic
 
@@ -8,7 +8,7 @@ A Cantera implementation of the counterflow solid fuel regression rate calculati
 
 ## Method
 
-The regression rate, $r_b$, can be calculated by both energy conservation and mass continuity. Energy conservation gives:
+The regression rate, $r_b$, is calculated by considering energy and mass conservations. Energy conservation is given by:
 
 ```math
 \dot{m}h_{\rm POM}^{T_i}-\dot{m}h_{\rm CH_2O}^{T_S}+\dot{Q}_{\rm cond}=0,
