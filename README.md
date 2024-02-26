@@ -14,7 +14,7 @@ The regression rate, $r_b$, is calculated by considering energy and mass conserv
 \dot{m}h_{\rm POM}^{T_i}-\dot{m}h_{\rm CH_2O}^{T_S}+\dot{Q}_{\rm cond}=0,
 ```
 
-where \dot{m} is the fuel consumption rate, $T_i$ is the inlet solid POM temperature, $h_{\rm POM}^{T_i}$ is the POM enthalpy at temperature $T_i$, $T_S$ is the outlet gas phase CH<sub>2</sub>O temperature, $h_{\rm CH_2O}^{T_S}$ is the gas CH<sub>2</sub>O enthalpy at temperature $T_S$ and $\dot{Q}_{\rm cond}$ is the heat transfer rate. The regression rate can be obtained from the mass flow rate as
+where $\dot{m}$ is the polymer fuel consumption rate, $T_i$ is the inlet solid POM temperature, $h_{\rm POM}^{T_i}$ is the POM enthalpy at temperature $T_i$, $T_S$ is the outlet gas phase CH<sub>2</sub>O temperature, $h_{\rm CH_2O}^{T_S}$ is the gas CH<sub>2</sub>O enthalpy at temperature $T_S$ and $\dot{Q}_{\rm cond}$ is the heat transfer rate. The regression rate can be obtained from the mass flow rate as
 
 ```math
 \tag{1}
