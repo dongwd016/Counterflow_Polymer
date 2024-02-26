@@ -5,6 +5,7 @@ A Cantera implementation of the counterflow solid fuel regression rate calculati
 ## Schematic
 
 The schematic uses polyoxymethylene (POM) as example:
+
 <img src="img/counterflow_expt.png" width="400"/><img src="img/counterflow_schematic.png" width="300"/>
 
 ## Method
