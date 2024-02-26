@@ -13,7 +13,7 @@ The schematic uses polyoxymethylene (POM) as example:
 The regression rate, $r_b$, is calculated by considering energy and mass conservations. Energy conservation is given by:
 
 ```math
-\dot{m}h_{\rm POM}^{T_i}-\dot{m}h^{T_S}+\dot{Q}_{\rm cond}=0,
+\dot{m}h(T_i)-\dot{m}h(T_S)+\dot{Q}_{\rm cond}=0,
 ```
 
 where $\dot{m}$ is the polymer fuel consumption rate, $T_i$ is the solid polymer temperature at a large distance removed from the burning surface, $h_{\rm POM}^{T_i}$ is the enthalpy of the polymer at temperature $T_i$, $T_S$ is the gas-condensed phase interface temperature, $h_{\rm CH_2O}^{T_S}$ is the gas CH<sub>2</sub>O enthalpy at temperature $T_S$ and $\dot{Q}_{\rm cond}$ is the heat transfer rate. The regression rate can be obtained from the mass flow rate as
