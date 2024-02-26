@@ -16,11 +16,11 @@ The regression rate, $r_b$, is calculated by considering energy and mass conserv
 \dot{m}h(T_i)-\dot{m}h(T_S)+\dot{Q}_{\rm cond}=0,
 ```
 
-where $\dot{m}$ is the polymer fuel consumption rate, $T_i$ is the solid polymer temperature at a large distance removed from the burning surface, $h_(T_i)$ is the total enthalpy of the polymer at temperature $T_i$, $T_S$ is the gas-condensed phase interface temperature, $h_(T_S)$ is the total enthalpy of the gas-phase polymer decomposition product at temperature $T_S$ and $\dot{Q}_{\rm cond}$ is the heat transfer rate. The regression rate can be obtained from the mass flow rate as
+where $\dot{m}$ is the polymer fuel consumption rate, $T_i$ is the solid polymer temperature at a large distance removed from the burning surface, $h(T_i)$ is the total enthalpy of the polymer at temperature $T_i$, $T_S$ is the gas-condensed phase interface temperature, $h(T_S)$ is the total enthalpy of the gas-phase polymer decomposition product at temperature $T_S$ and $\dot{Q}_{\rm cond}$ is the heat transfer rate. The regression rate can be obtained from the mass flow rate as
 
 ```math
 \tag{1}
-r_b=\frac{\dot{m}}{\rho_{\rm solid}}=\frac{\dot{Q}_{\rm cond}}{\Delta h\rho_{\rm solid}}=\frac{k_{\rm gas}\left.\frac{\partial T}{\partial x}\right|_{x=0}}{(h_{\rm POM}^{T_i}-h_{\rm CH_2O}^{T_S})\rho_{\rm solid}},
+r_b=\frac{\dot{m}}{\rho_{\rm solid}}=\frac{\dot{Q}_{\rm cond}}{\Delta h\rho_{\rm solid}}=\frac{k_{\rm gas}\left.\frac{\partial T}{\partial x}\right|_{x=0}}{(h_{\rm POM}^{T_i}-h(T_S))\rho_{\rm solid}},
 ```
 
 where $\rho_{\rm solid}$ is the solid POM density and $k_{\rm gas}$ is the gas thermal conductivity.
