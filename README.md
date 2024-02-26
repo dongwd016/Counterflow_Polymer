@@ -11,10 +11,10 @@ A Cantera implementation of the counterflow solid fuel regression rate calculati
 The regression rate, $r_b$, is calculated by considering energy and mass conservations. Energy conservation is given by:
 
 ```math
-\dot{m}h_{\rm POM}^{T_i}-\dot{m}h_{\rm CH_2O}^{T_S}+\dot{Q}_{\rm cond}=0,
+\dot{m}h_{\rm POM}^{T_i}-\dot{m}h^{T_S}+\dot{Q}_{\rm cond}=0,
 ```
 
-where $\dot{m}$ is the polymer fuel consumption rate, $T_i$ is the inlet solid POM temperature, $h_{\rm POM}^{T_i}$ is the POM enthalpy at temperature $T_i$, $T_S$ is the outlet gas phase CH<sub>2</sub>O temperature, $h_{\rm CH_2O}^{T_S}$ is the gas CH<sub>2</sub>O enthalpy at temperature $T_S$ and $\dot{Q}_{\rm cond}$ is the heat transfer rate. The regression rate can be obtained from the mass flow rate as
+where $\dot{m}$ is the polymer fuel consumption rate, $T_i$ is the solid polymer temperature at a large distance removed from the burning surface, $h_{\rm POM}^{T_i}$ is the enthalpy of the polymer at temperature $T_i$, $T_S$ is the gas-condensed phase interface temperature, $h_{\rm CH_2O}^{T_S}$ is the gas CH<sub>2</sub>O enthalpy at temperature $T_S$ and $\dot{Q}_{\rm cond}$ is the heat transfer rate. The regression rate can be obtained from the mass flow rate as
 
 ```math
 \tag{1}
@@ -50,7 +50,7 @@ where $s$ is a scaling factor to assure convergence. $s=0.3$ for example.
 
 ## Example
 
-Sample code is procided in the jupyter notebook file, "example/counterflow.ipynb". It reproduces Fig. 26 of the original thesis using Cantera CounterflowDiffusionFlame.
+Sample code is provided in the jupyter notebook file, "example/counterflow.ipynb". It reproduces Fig. 26 of Talamantes' thesis using Cantera CounterflowDiffusionFlame.
 
 ## Contributors
 
