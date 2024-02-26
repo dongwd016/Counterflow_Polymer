@@ -35,20 +35,20 @@ The regression rate can also be calculated from mass conservation:
 where $v_f$ is the gas phase fuel inlet velocity and $\rho_{\rm gas}$ is the gas density.
 
 Required boundary conditions to solve the counterflow problem are
-- Oxidizer inlet composition: provided. Pure oxygen for example.
-- Oxidizer inlet temperature: provided. 298 K for example.
+- Oxidizer inlet composition: provided. pure oxygen as example.
+- Oxidizer inlet temperature: provided. 298 K as example.
 - Oxidizer inlet velocity: provided.
-- Fuel inlet composition: provided. Pure POM.
-- Fuel inlet temperature: provided. 700K for example. The regression rate is found to be insensitive to fuel inlet temperature under the heat transfer dominating assumption.
-- Fuel inlet velocity: Unknown.
+- "Fuel inlet" composition: provided. POM assumedf.
+- "Fuel inlet" temperature: provided. 700K as example. The regression rate is found to be insensitive to fuel inlet temperature under the heat transfer dominating assumption.
+- "Fuel inlet" velocity: a dependent variable to be solved.
 
-Fuel inlet velocity is the only unknown boundary condition. The algorithm first places a guess for fuel inlet velocity, for instance, equal to the oxidizer inlet velocity. Cantera CounterflowDiffusionFlame is then used to solve the counterflow problem. The solution provides gas phase density at the fuel side boundary, which allows the calculation of the regression rate from equation (2). The solution also provides the gas phase thermal conductivity and the temperature gradient at the fuel side boundary, which give the conductive heat flux. Subsequently, the regression rate can be calculated from equation (1). The goal is to find a fuel inlet velocity to match these two regression rates. Iterations are performed until the difference between two regression rates is less than a given tolerence, $10^{-9}$ m/s for example. At each iteration, the fuel inlet velocity is updated using the expression:
+Fuel inlet velocity is treated as a boundary condition, which is solved. The algorithm first makes a guess for the "fuel inlet" velocity (which corrrespond to a given polymer regression rate), for instance, equal to the oxidizer inlet velocity. Cantera CounterflowDiffusionFlame then solves the counterflow problem, and the solution provides density at the fuel side boundary, which allows the calculation of the regression rate from equation (2). The solution also provides the gas-phase thermal conductivity and the temperature gradient at the fuel side boundary, which enables an calculation for the conductive heat flux. Subsequently, the regression rate is determined from equation (1). The goal is to find a "fuel inlet" velocity iteratuvely to match the regression rates. Iterations are made until the difference between the two regression rates is < a given tolerence, e.g., $10^{-9}$ m/s. At each iteration, the fuel inlet velocity is updated using the expression:
 
 ```math
 v_{f,\rm new}=v_{f,\rm old}\frac{\tilde{r_b}+s(r_b-\tilde{r_b})}{\tilde{r_b}},
 ```
 
-where $s$ is a scaling factor to assure convergence. $s=0.3$ for example.
+where $s$ is a scaling factor to assure convergence. $s=0.3$ as example.
 
 ## Example
 
