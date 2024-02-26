@@ -23,9 +23,9 @@ where $\dot{m}$ is the polymer fuel consumption rate, $T_i$ is the solid polymer
 r_b=\frac{\dot{m}}{\rho_{\rm solid}}=\frac{\dot{Q}_{\rm cond}}{\Delta h\rho_{\rm solid}}=\frac{k_{\rm gas}\left.\frac{\partial T}{\partial x}\right|_{x=0}}{[h(T_i)-h(T_S)]\rho_{\rm solid}},
 ```
 
-where $\rho_{\rm solid}$ is the mass density of polymer and $k_{\rm gas}$ is the gas thermal conductivity.
+where $\rho_{\rm solid}$ is the mass density of the polymer, and $k_{\rm gas}$ is the gas thermal conductivity.
 
-The regression rate can also be calculated from mass continuity.
+The regression rate can also be calculated from mass conservation:
 
 ```math
 \tag{2}
