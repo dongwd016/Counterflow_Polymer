@@ -1,4 +1,4 @@
-# Quaisi One-Dimensional Counterflow Flame of Polymer Combustion
+# Quasi One-Dimensional Counterflow Flame of Polymer Combustion
 
 A Cantera implementation of the counterflow solid fuel regression rate calculation.  The algorithm is given in "G. Talamantes, Characterization of polyoxymethylene as a high-density fuel for use in hybrid rocket applications, Ph.D. thesis, The Pennsylvania State University (2019)."
 
