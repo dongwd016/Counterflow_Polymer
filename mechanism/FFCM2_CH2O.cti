@@ -1,32 +1,37 @@
 """
-   CH2O based on Foundational Fuel Chemistry Model Version 2 (FFCM-2)
+***************************************************************************************
 
-   - Description:
-     FFCM-2: An optimized reaction model for combustion chemistry of species up to CH2O
+ CH2O sub mechanism based on Foundational Fuel Chemistry Model Version 2 (FFCM-2)
 
-   - Authors:
-       Yue Zhang, Wendi Dong, Laurien A. Vandewalle, Rui Xu, Gregory P. Smith, Hai Wang
+ - Description:
+   FFCM-2: An optimized reaction model for combustion chemistry of species up to C4
+   CH2O sub mechanism: species up to CH2O
 
-   - Date:
-       July 2023
+ - Authors:
+     Yue Zhang, Wendi Dong, Laurien A. Vandewalle, Rui Xu, Gregory P. Smith, Hai Wang
 
-   - Contact:
-       Hai Wang: haiwang@stanford.edu
+ - Date:
+     July 2023
 
-   - https://web.stanford.edu/group/haiwanglab/FFCM2/
+ - Contact:
+     Hai Wang: haiwang@stanford.edu
 
-   - How to cite:
+ - https://web.stanford.edu/group/haiwanglab/FFCM2/
 
-     Y. Zhang, W. Dong, L. Vandewalle, R. Xu, G.P. Smith and H. Wang, Foundational Fuel Chemistry Model Version 2.0 (FFCM-2), https://web.stanford.edu/group/haiwanglab/FFCM2, 2023.
+ - How to cite:
 
-    Bibtex
-    @Misc{ZDV2023,
-    author           = {Zhang, Yue and Dong, Wendi and Vandewalle, Laurien and Xu, Rui and Smith, Gregory and Wang, Hai},
-    title            = {Foundational {Fuel} {Chemistry} {Model} {Version} 2.0 ({FFCM}-2)},
-    year             = {2023},
-    modificationdate = {2023-06-28T19:14:11},
-    url              = {https://web.stanford.edu/group/haiwanglab/FFCM2/},
-    }
+   Y. Zhang, W. Dong, L. Vandewalle, R. Xu, G.P. Smith and H. Wang, Foundational Fuel Chemistry Model Version 2.0 (FFCM-2), https://web.stanford.edu/group/haiwanglab/FFCM2, 2023.
+
+  Bibtex
+  @Misc{ZDV2023,
+  author           = {Zhang, Yue and Dong, Wendi and Vandewalle, Laurien and Xu, Rui and Smith, Gregory and Wang, Hai},
+  title            = {Foundational {Fuel} {Chemistry} {Model} {Version} 2.0 ({FFCM}-2)},
+  year             = {2023},
+  modificationdate = {2023-06-28T19:14:11},
+  url              = {https://web.stanford.edu/group/haiwanglab/FFCM2/},
+  }
+
+****************************************************************************************
 
 """
 
@@ -58,7 +63,8 @@ species(name='N2',
                                 diam=3.621,
                                 well_depth=97.53,
                                 polar=1.76,
-                                rot_relax=4.0))
+                                rot_relax=4.0),
+        note='G8/02')
 
 species(name='H',
         atoms='H:1',
@@ -72,7 +78,8 @@ species(name='H',
                       -4.46682850E-01])),
         transport=gas_transport(geom='atom',
                                 diam=2.05,
-                                well_depth=145.0))
+                                well_depth=145.0),
+        note='L6/94')
 
 species(name='H2',
         atoms='H:2',
@@ -88,7 +95,8 @@ species(name='H2',
                                 diam=2.92,
                                 well_depth=38.0,
                                 polar=0.79,
-                                rot_relax=280.0))
+                                rot_relax=280.0),
+        note='tpis78')
 
 species(name='O',
         atoms='O:1',
@@ -102,7 +110,8 @@ species(name='O',
                        4.92229457E+00])),
         transport=gas_transport(geom='atom',
                                 diam=2.75,
-                                well_depth=80.0))
+                                well_depth=80.0),
+        note='L1/90')
 
 species(name='O2',
         atoms='O:2',
@@ -118,7 +127,8 @@ species(name='O2',
                                 diam=3.458,
                                 well_depth=107.4,
                                 polar=1.6,
-                                rot_relax=3.8))
+                                rot_relax=3.8),
+        note='RUS89')
 
 species(name='OH',
         atoms='H:1 O:1',
@@ -132,7 +142,8 @@ species(name='OH',
                        5.84494652E+00])),
         transport=gas_transport(geom='linear',
                                 diam=2.75,
-                                well_depth=80.0))
+                                well_depth=80.0),
+        note='IU3/03')
 
 species(name='H2O',
         atoms='H:2 O:1',
@@ -148,7 +159,8 @@ species(name='H2O',
                                 diam=2.605,
                                 well_depth=572.4,
                                 dipole=1.844,
-                                rot_relax=4.0))
+                                rot_relax=4.0),
+        note='L5/89')
 
 species(name='HO2',
         atoms='H:1 O:2',
@@ -163,7 +175,8 @@ species(name='HO2',
         transport=gas_transport(geom='nonlinear',
                                 diam=3.458,
                                 well_depth=107.4,
-                                rot_relax=1.0))
+                                rot_relax=1.0),
+        note='T1/09')
 
 species(name='H2O2',
         atoms='H:2 O:2',
@@ -178,7 +191,8 @@ species(name='H2O2',
         transport=gas_transport(geom='nonlinear',
                                 diam=3.458,
                                 well_depth=107.4,
-                                rot_relax=3.8))
+                                rot_relax=3.8),
+        note='T8/03')
 
 species(name='CO',
         atoms='C:1 O:1',
@@ -194,7 +208,8 @@ species(name='CO',
                                 diam=3.65,
                                 well_depth=98.1,
                                 polar=1.95,
-                                rot_relax=1.8))
+                                rot_relax=1.8),
+        note='RUS79')
 
 species(name='CO2',
         atoms='C:1 O:2',
@@ -210,7 +225,8 @@ species(name='CO2',
                                 diam=3.763,
                                 well_depth=244.0,
                                 polar=2.65,
-                                rot_relax=2.1))
+                                rot_relax=2.1),
+        note='L7/88')
 
 species(name='HCO',
         atoms='C:1 H:1 O:1',
@@ -225,7 +241,8 @@ species(name='HCO',
         transport=gas_transport(geom='nonlinear',
                                 diam=3.59,
                                 well_depth=498.0,
-                                rot_relax=2.0))
+                                rot_relax=2.0),
+        note='T5/03')
 
 species(name='CH2O',
         atoms='C:1 H:2 O:1',
@@ -240,7 +257,8 @@ species(name='CH2O',
         transport=gas_transport(geom='nonlinear',
                                 diam=3.59,
                                 well_depth=498.0,
-                                rot_relax=2.0))
+                                rot_relax=2.0),
+        note='g8/88')
 
 #-------------------------------------------------------------------------------
 # Reaction data

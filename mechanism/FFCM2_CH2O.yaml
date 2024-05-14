@@ -1,10 +1,11 @@
 description: |-
   ***************************************************************************************
 
-   CH2O based on Foundational Fuel Chemistry Model Version 2 (FFCM-2)
+   CH2O sub mechanism based on Foundational Fuel Chemistry Model Version 2 (FFCM-2)
 
    - Description:
      FFCM-2: An optimized reaction model for combustion chemistry of species up to CH2O
+     CH2O sub mechanism: species up to CH2O
 
    - Authors:
        Yue Zhang, Wendi Dong, Laurien A. Vandewalle, Rui Xu, Gregory P. Smith, Hai Wang
